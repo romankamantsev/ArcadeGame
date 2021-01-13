@@ -1,0 +1,6 @@
+<div>
+	Refill amount:
+	<input type="number" min="1" max = "100" [value]="amount" (input)="onInput($event)" />
+	<button (click)="refill.emit(amount)">Refill</button>
+	<span>{{amount}}</span>
+</div>

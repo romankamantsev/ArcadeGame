@@ -1,4 +1,6 @@
 <app-header name="{{ playerName }}"></app-header>
+<app-balance [balance]="balance"></app-balance>
+<app-refill (refill)="onRefill($event)"></app-refill>
 <p>
-  Start editing to see some magic happen :)
+	Start editing to see some magic happen :)
 </p>
