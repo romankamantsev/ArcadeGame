@@ -13,7 +13,7 @@ export class BalanceComponent {
 
   constructor(public balanceService: BalanceService) {}
 
-  public onViewHistory() {
+  public onViewHistory(): void {
     this.historyToggle = !this.historyToggle;
     this.viewHistory.emit();
   }

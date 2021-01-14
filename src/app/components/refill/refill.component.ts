@@ -10,11 +10,11 @@ export class RefillComponent {
   public amount: number = 1;
   constructor(private balanceService: BalanceService) {}
 
-  public onInput(event: any) {
+  public onInput(event: any): void {
     this.amount = parseInt(event.target.value) || 0;
   }
 
-  public onRefill() {
+  public onRefill(): void {
     this.balanceService.replenish(this.amount);
   }
 }

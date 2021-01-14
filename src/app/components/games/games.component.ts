@@ -14,11 +14,11 @@ export class GamesComponent {
   public selectedGameId: number = this.games[0] ? this.games[0].id : null;
   constructor(public balanceService: BalanceService) {}
 
-  public onInput(event: any) {
+  public onInput(event: any): void {
     this.amount = parseInt(event.target.value) || 0;
   }
 
-  public onPlay() {
+  public onPlay(): void {
     let game = this.games.find(g => g.id === this.selectedGameId);
     if (!game) {
       alert("Cannot find selected game!");
@@ -32,7 +32,7 @@ export class GamesComponent {
     }
   }
 
-  public canPlay() {
+  public canPlay(): boolean {
     return this.amount > 0 && this.amount <= this.balanceService.getBalance();
   }
 }
