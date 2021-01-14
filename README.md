@@ -1,4 +1,4 @@
-ACME arcade implementation
+Arcade Token Tracking System implementation
 
 Additional features to ledger system could be the following:
 1) add time (maybe even with date) to each history record to help a customer to recognize when a transaction did happen.
