@@ -1,5 +1,5 @@
 <div>
-	Your current balance: {{ this.balanceService.getBalance() }}
+	Your current card balance: {{ this.balanceService.getBalance() }}
 	token<span *ngIf="this.balanceService.getBalance() > 1">s</span>.
 	<button (click)="onViewHistory()">{{this.historyToggle ? 'Hide History' : 'View History'}}</button>
 </div>
