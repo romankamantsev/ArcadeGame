@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
+import { BalanceService } from "../../services/balance-service";
 
 @Component({
   selector: "app-refill",
@@ -8,10 +8,13 @@ import { Output, EventEmitter } from "@angular/core";
 })
 export class RefillComponent {
   amount: number = 1;
-
-  @Output() refill = new EventEmitter();
+  constructor(private balanceService: BalanceService) {}
 
   onInput(event: any) {
     this.amount = parseInt(event.target.value) || 0;
+  }
+
+  onRefill() {
+    this.balanceService.replenish(this.amount);
   }
 }
