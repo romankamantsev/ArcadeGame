@@ -1,6 +1,9 @@
 <app-header name="{{ playerName }}"></app-header>
 <hr />
-<app-balance></app-balance>
+<app-balance (viewHistory)="onHistoryToggle()"></app-balance>
 <hr />
+<app-history *ngIf="historyToggle"></app-history>
+<hr *ngIf="historyToggle" />
 <app-refill (refill)="onRefill($event)"></app-refill>
 <hr />
+<app-games></app-games>

@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { BalanceService } from "../services/balance-service";
+import { Component, Output, EventEmitter } from "@angular/core";
+import { BalanceService } from "../../services/balance-service";
 
 @Component({
   selector: "app-balance",
@@ -7,5 +7,13 @@ import { BalanceService } from "../services/balance-service";
   styleUrls: ["./balance.component.css"]
 })
 export class BalanceComponent {
+  historyToggle: boolean = false;
+  @Output() viewHistory = new EventEmitter();
+
   constructor(public balanceService: BalanceService) {}
+
+  onViewHistory() {
+    this.historyToggle = !this.historyToggle;
+    this.viewHistory.emit();
+  }
 }

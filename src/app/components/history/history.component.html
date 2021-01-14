@@ -1,1 +1,7 @@
-<div>Hisory</div>
+<div>
+	<span>Transactions History:</span>
+	<div *ngFor="let entry of this.balanceService.getHistory()">
+		<p>{{ entry }}</p>
+	</div>
+	<div *ngIf="this.balanceService.getHistory().length==0">History is empty.</div>
+</div>

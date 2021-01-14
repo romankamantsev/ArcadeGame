@@ -3,15 +3,9 @@ import { Component, Input } from "@angular/core";
 @Component({
   selector: "app-header",
   template: `
-    <h1>Hello {{ name }}! Lets play!</h1>
+    <h1>Hello, {{ name }}!</h1>
   `,
-  styles: [
-    `
-      h1 {
-        font-family: Lato;
-      }
-    `
-  ]
+  styles: []
 })
 export class HeaderComponent {
   @Input() name: string;

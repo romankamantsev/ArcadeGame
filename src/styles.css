@@ -1,1 +1,9 @@
 /* Add application styles & imports to this file! */
+h1,
+p {
+  font-family: Lato;
+}
+
+hr {
+  border: 1px solid black;
+}

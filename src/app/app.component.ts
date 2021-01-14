@@ -8,11 +8,15 @@ import { BalanceService } from "./services/balance-service";
 })
 export class AppComponent {
   playerName = "John Doe";
-  history = [];
+  historyToggle: boolean = false;
 
   constructor(private balanceService: BalanceService) {}
 
   onRefill(amount: number) {
     this.balanceService.replenish(amount);
+  }
+
+  onHistoryToggle() {
+    this.historyToggle = !this.historyToggle;
   }
 }

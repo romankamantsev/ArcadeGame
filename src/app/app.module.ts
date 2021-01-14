@@ -7,6 +7,7 @@ import { HeaderComponent } from "./components/header.component";
 import { HistoryComponent } from "./components/history/history.component";
 import { BalanceComponent } from "./components/balance/balance.component";
 import { RefillComponent } from "./components/refill/refill.component";
+import { GamesComponent } from "./components/games/games.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { RefillComponent } from "./components/refill/refill.component";
     HeaderComponent,
     HistoryComponent,
     BalanceComponent,
-    RefillComponent
+    RefillComponent,
+    GamesComponent
   ],
   bootstrap: [AppComponent]
 })

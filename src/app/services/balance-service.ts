@@ -19,20 +19,19 @@ export class BalanceService {
     if (amount > 0) {
       this.balance += amount;
       this.history.push(`Card Refill: +${this.getAmountString(amount)}`);
-      console.log(`Card Refill: +${this.getAmountString(amount)}`);
     }
   }
 
   withdraw(amount: number, gameName: string) {
     if (amount <= 0) return;
-    if (amount >= this.balance) {
+
+    if (amount <= this.balance) {
       this.balance -= amount;
       this.history.push(`${gameName}: -${this.getAmountString(amount)}`);
-      console.log(`${gameName}: -${this.getAmountString(amount)}`);
     } else throw new Error("Insufficient funds to write off!");
   }
 
   private getAmountString(amount: number) {
-    return amount + (amount > 1 ? "tokens" : "token");
+    return amount + (amount > 1 ? " tokens" : " token");
   }
 }

@@ -12,6 +12,6 @@ export class RefillComponent {
   @Output() refill = new EventEmitter();
 
   onInput(event: any) {
-    this.amount = parseInt(event.target.value);
+    this.amount = parseInt(event.target.value) || 0;
   }
 }
