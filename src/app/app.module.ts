@@ -3,10 +3,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./component/header.component";
-import { HistoryComponent } from "./history/history.component";
-import { BalanceComponent } from "./balance/balance.component";
-import { RefillComponent } from "./refill/refill.component";
+import { HeaderComponent } from "./components/header.component";
+import { HistoryComponent } from "./components/history/history.component";
+import { BalanceComponent } from "./components/balance/balance.component";
+import { RefillComponent } from "./components/refill/refill.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
