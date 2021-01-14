@@ -7,12 +7,13 @@ import { BalanceService } from "../../services/balance-service";
   styleUrls: ["./balance.component.css"]
 })
 export class BalanceComponent {
-  historyToggle: boolean = false;
-  @Output() viewHistory = new EventEmitter();
+  @Output() private viewHistory = new EventEmitter();
+
+  public historyToggle: boolean = false;
 
   constructor(public balanceService: BalanceService) {}
 
-  onViewHistory() {
+  public onViewHistory() {
     this.historyToggle = !this.historyToggle;
     this.viewHistory.emit();
   }

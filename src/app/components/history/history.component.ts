@@ -7,9 +7,5 @@ import { BalanceService } from "../../services/balance-service";
   styleUrls: ["./history.component.css"]
 })
 export class HistoryComponent {
-  history: Array<string>;
-
-  constructor(public balanceService: BalanceService) {
-    this.history = balanceService.getHistory();
-  }
+  constructor(public balanceService: BalanceService) {}
 }

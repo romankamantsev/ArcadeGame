@@ -8,5 +8,5 @@ import { Component, Input } from "@angular/core";
   styles: []
 })
 export class HeaderComponent {
-  @Input() name: string;
+  @Input() public name: string;
 }

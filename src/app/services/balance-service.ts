@@ -4,25 +4,25 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class BalanceService {
-  balance: number = 0;
-  history = [];
+  private balance: number = 0;
+  private history = [];
 
-  getBalance() {
+  public getBalance() {
     return this.balance;
   }
 
-  getHistory() {
+  public getHistory() {
     return this.history.slice();
   }
 
-  replenish(amount: number) {
+  public replenish(amount: number) {
     if (amount > 0) {
       this.balance += amount;
       this.history.push(`Card Refill: +${this.getAmountString(amount)}`);
     }
   }
 
-  withdraw(amount: number, gameName: string) {
+  public withdraw(amount: number, gameName: string) {
     if (amount <= 0) return;
 
     if (amount <= this.balance) {
