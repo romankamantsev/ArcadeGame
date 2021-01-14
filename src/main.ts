@@ -19,6 +19,7 @@ platformBrowserDynamic()
   .catch(err => console.error(err));
 
 //Comment above and uncomment below to execute tests
+
 /*
 import "./polyfills";
 
