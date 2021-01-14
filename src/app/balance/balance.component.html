@@ -1,3 +1,4 @@
 <div>
-	Your current balance: {{ balance }} token<span *ngIf="balance > 1">s</span>.
+	Your current balance: {{ this.balanceService.getBalance() }}
+	token<span *ngIf="this.balanceService.getBalance() > 1">s</span>.
 </div>
